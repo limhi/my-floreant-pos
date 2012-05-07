@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010/11/2 ?U?? 09:43:26 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping package="com.gama.table.dataobject">
+    <class name="EventMeter" table="event">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+     
+        <property name="MNum" type="java.lang.Integer">
+            <column name="MNum"  not-null="true" />
+        </property>
+        <property name="eventId" type="java.lang.Integer">
+            <column name="EventId"  not-null="true" />
+        </property>
+        
+        <property name="eventTime" type="java.util.Date">
+            <column name="EventTime" not-null="true" />
+        </property>
+        
+        <property name="billIn" type="java.lang.Long">
+            <column name="BillIn" not-null="true" />
+        </property>
+        
+       	
+       	    <property name="note1" type="java.lang.Integer">
+            <column name="Note1" not-null="true" />
+        </property>
+        
+        	    <property name="note2" type="java.lang.Integer">
+            <column name="Note2" not-null="true" />
+        </property>
+        
+        	    <property name="note3" type="java.lang.Integer">
+            <column name="Note3" not-null="true" />
+        </property>
+        
+        	    <property name="note4" type="java.lang.Integer">
+            <column name="Note4" not-null="true" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

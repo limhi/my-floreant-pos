@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.floreantpos.model">
+	<!-- Associations -->
+	<class name="com.floreantpos.model.Tester" table="TESTER">
+		<id column="ID" name="id" type="java.lang.Integer">
+			<generator class="identity" />
+		</id>
+		<version column="MODIFIED_TIME" generated="never" name="modifiedTime"
+			type="timestamp" />
+		<property column="NAME" generated="never" lazy="false"
+			length="20" name="name" not-null="true" type="java.lang.String" />
+		<property column="RATE" generated="never" lazy="false"
+			length="52" name="rate" type="java.lang.Double" />
+	</class>
+</hibernate-mapping>
