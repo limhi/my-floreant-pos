@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010/11/2 ?U?? 09:43:26 by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping package="com.gama.table.dataobject">
+    <class name="IssueDetail" table="issuedetail">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+     
+      
+         <many-to-one name="issue" 
+                     column="issue_id"
+                     class="com.gama.table.dataobject.Issue"
+                     cascade="save-update" not-null="true"
+                     outer-join="true"/>  
+    </class>
+</hibernate-mapping>
