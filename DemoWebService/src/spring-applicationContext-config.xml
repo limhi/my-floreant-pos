@@ -24,7 +24,7 @@
 		
 		
 		<property name="username" value="root" />
-		<property name="password" value="shrimping" />
+		<property name="password" value="gush0905" />
 		<property name="initialSize" value="10" />
 		<property name="maxActive" value="1000" />
 		<property name="maxWait" value="5000" />
