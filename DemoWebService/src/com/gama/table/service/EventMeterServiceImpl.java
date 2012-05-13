@@ -45,6 +45,20 @@ public class EventMeterServiceImpl implements EventMeterService{
 		}
 		return eventMeterDAO.findByCriteria(crit);
 	}
+	@Override
+	public EventMeter findById(Integer id) {
+		return eventMeterDAO.findById(id);
+	}
+	@Override
+	public void deleteById(Integer id) {
+		eventMeterDAO.makeTransient(eventMeterDAO.findById(id));
+		
+	}
+	@Override
+	public EventMeter saveOrUpdate(EventMeter entity) {
+		
+		return eventMeterDAO.makePersistent(entity);
+	}
 	
 
 }

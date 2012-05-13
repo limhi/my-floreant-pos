@@ -8,4 +8,16 @@
         <property name="eventMeterService" ref="eventMeterService">
         </property>
     </bean>
+
+    <bean id="httpUpdateRequestHandler" class="com.gama.table.dojo.HttpUpdateRequestHandler">
+        <property name="eventMeterService" ref="eventMeterService">
+        </property>
+    </bean>
+    
+      <bean id="httpDeleteRequestHandler" class="com.gama.table.dojo.HttpDeleteRequestHandler">
+        <property name="eventMeterService" ref="eventMeterService">
+        </property>
+    </bean>
+    
+    
 </beans>

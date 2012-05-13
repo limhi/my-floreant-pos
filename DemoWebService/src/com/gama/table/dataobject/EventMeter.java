@@ -11,14 +11,14 @@ public class EventMeter extends GenericDataObject<Integer>{
 	 * 
 	 */
 	private static final long serialVersionUID = -1523086412454976100L;
-	Integer MNum;
-	Integer eventId;
-	Date eventTime;
-	Long billIn;
-	Integer note1;
-	Integer note2;
-	Integer note3;
-	Integer note4;
+	public Integer MNum;
+	public Integer eventId;
+	public Date eventTime;
+	public Long billIn;
+	public Integer note1;
+	public Integer note2;
+	public Integer note3;
+	public Integer note4;
 	public Integer getMNum() {
 		return MNum;
 	}

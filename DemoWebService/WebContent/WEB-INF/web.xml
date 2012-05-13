@@ -30,21 +30,48 @@
 </init-param>
     </servlet>
 	
-	<!-- 
-	<servlet>
-        <servlet-name>loadServlet</servlet-name>
-        <servlet-class>com.gama.table.dojo.Load</servlet-class>
-       
+<servlet>
+        <servlet-name>httpLoadRequestHandler</servlet-name>
+        <servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+    </servlet>
+   
+     
+    
+    <servlet>
+        <servlet-name>httpUpdateRequestHandler</servlet-name>
+        <servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
     </servlet>
     
     
-	 <servlet-mapping>
-        <servlet-name>loadServlet</servlet-name>
-        <url-pattern>/load.do</url-pattern>
-       
-    </servlet-mapping>
-     -->
+      
+    <servlet>
+        <servlet-name>httpDeleteRequestHandler</servlet-name>
+        <servlet-class>org.springframework.web.context.support.HttpRequestHandlerServlet</servlet-class>
+    </servlet>
     
+    
+    
+    <servlet-mapping>
+        <servlet-name>httpDeleteRequestHandler</servlet-name>
+        <url-pattern>/delete.do</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    <servlet-mapping>
+        <servlet-name>httpUpdateRequestHandler</servlet-name>
+        <url-pattern>/update.do</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    
+    
+      <servlet-mapping>
+        <servlet-name>httpLoadRequestHandler</servlet-name>
+        <url-pattern>/load.do</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>spring-ws</servlet-name>
         <url-pattern>*.wsdl</url-pattern>

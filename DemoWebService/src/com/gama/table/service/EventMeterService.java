@@ -12,4 +12,10 @@ public interface EventMeterService {
 	
 	public List<EventMeter> find(int MNum,int eventId,Date stateDate,Date endDate);
 	
+	public EventMeter findById(Integer id);
+	
+	public void deleteById(Integer id);
+	
+	public EventMeter saveOrUpdate(EventMeter entity);
+	
 }
