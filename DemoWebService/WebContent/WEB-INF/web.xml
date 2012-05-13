@@ -4,8 +4,22 @@
              http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
 
-    <display-name>MyCompany HR Holiday Service</display-name>
+    <display-name>Demo Web Service</display-name>
+	
+	
+	   
+    <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring-applicationContext-*.xml</param-value>
+  </context-param>
 
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	
+	
     <!-- take especial notice of the name of this servlet -->
     <servlet>
         <servlet-name>spring-ws</servlet-name>
@@ -15,10 +29,27 @@
 	  <param-value>true</param-value>
 </init-param>
     </servlet>
-
+	
+	<!-- 
+	<servlet>
+        <servlet-name>loadServlet</servlet-name>
+        <servlet-class>com.gama.table.dojo.Load</servlet-class>
+       
+    </servlet>
+    
+    
+	 <servlet-mapping>
+        <servlet-name>loadServlet</servlet-name>
+        <url-pattern>/load.do</url-pattern>
+       
+    </servlet-mapping>
+     -->
+    
     <servlet-mapping>
         <servlet-name>spring-ws</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>*.wsdl</url-pattern>
+       
     </servlet-mapping>
-
+	
+	
 </web-app>
