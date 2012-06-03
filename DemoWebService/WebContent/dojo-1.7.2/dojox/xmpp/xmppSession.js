@@ -319,7 +319,7 @@ for(var i=0;i<msg.childNodes.length;i++){
 var n=msg.childNodes[i];
 if(n.hasChildNodes()){
 switch(n.nodeName){
-case "status":
+ 
 case "show":
 p[n.nodeName]=n.firstChild.nodeValue;
 break;
